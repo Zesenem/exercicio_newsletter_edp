@@ -1,0 +1,161 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Open Sans", serif;
+}
+
+body {
+  background-color: lightgray;
+}
+
+/* Main styles */
+
+main {
+  width: 640px;
+  margin: 10px auto;
+  background-color: white;
+}
+
+/* Header */
+
+header {
+  background-color: rgb(231, 231, 231);
+  text-align: center;
+
+}
+
+header img {
+  max-width: 100%;
+}
+
+.headerSection h1 {
+  color: rgb(80, 192, 173);
+}
+
+.redtext {
+  color: rgb(246, 51, 79);
+  text-transform: uppercase;
+}
+
+.bluetext {
+    color: rgb(80, 192, 173);
+}
+
+/* Buttons */
+
+button {
+  background-color: rgb(246, 51, 79);
+  border-radius: 15px;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* Article Left and Right Aligned */
+
+.bold {
+  font-weight: bold;
+}
+
+.textleft,
+.textright {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.textleft {
+  flex-direction: row;
+}
+
+.textright {
+  flex-direction: row-reverse;
+}
+
+p {
+    padding: 10px;
+}
+
+/* Text container */
+
+.textleft div,
+.textright div {
+  flex: 1;
+}
+
+/* Image Styling */
+
+.articles-image {
+  max-width: 50%;
+  height: auto;
+}
+
+/* Article Center Aligned */
+
+.textcenter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-color: rgb(198, 233, 230);
+}
+
+.EDP-Zero {
+  flex: 1;
+  max-width: 60%;
+}
+
+/* Side Images */
+
+.sideimages {
+  max-width: 15%;
+  height: auto;
+}
+
+/* Store Buttons */
+
+.store-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.store-buttons img {
+  max-width: 120px;
+  height: auto;
+}
+
+/* Footer */
+
+footer {
+  background-color: rgb(37, 37, 37);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-image-div {
+  background-color: rgb(51, 51, 51);
+}
+
+.footer-image {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.footer-content {
+  max-width: 640px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.footer-content p:nth-of-type(3) {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+footer a {
+  color: white;
+}
