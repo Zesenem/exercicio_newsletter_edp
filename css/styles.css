@@ -1,21 +1,45 @@
+/* Global Reset And Base Styles */
+
 * {
   padding: 0px;
   margin: 0px;
   border: none;
   box-sizing: border-box;
-  font-family: "Open Sans", serif;
 }
 
 body {
   background-color: lightgray;
+  font-family: "Open Sans", serif;
+  position: relative;
+}
+
+/* Portfolio Button Styles */
+
+.portfolio-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease;
+}
+
+.portfolio-button:hover {
+  background-color: #444;
 }
 
 /* Main styles */
 
 main {
   width: 640px;
-  margin: 10px auto;
+  margin: 0px auto 10px auto;
   background-color: white;
+  position: relative;
 }
 
 /* Header */
@@ -23,15 +47,25 @@ main {
 header {
   background-color: rgb(231, 231, 231);
   text-align: center;
-
 }
 
-header img {
+header img,
+.header-section img {
+  display: block;
+  margin: 0;
+  padding: 0;
   max-width: 100%;
 }
 
-.headerSection h1 {
+/* Header Content Styling */
+
+.header-section h1 {
   color: rgb(80, 192, 173);
+  font-size: 3em;
+}
+
+header p {
+  margin: 20px 40px;
 }
 
 .redtext {
@@ -40,7 +74,13 @@ header img {
 }
 
 .bluetext {
-    color: rgb(80, 192, 173);
+  color: rgb(80, 192, 173);
+}
+
+/* Generic bold utility */
+
+.bold {
+  font-weight: bold;
 }
 
 /* Buttons */
@@ -51,104 +91,162 @@ button {
   padding: 10px 30px;
   text-transform: uppercase;
   color: white;
+  margin-bottom: 30px;
+  cursor: pointer;
+  font-size: 1em;
 }
 
-/* Article Left and Right Aligned */
+/* Align text left / right articles */
 
-.bold {
-  font-weight: bold;
-}
-
-.textleft,
-.textright {
+.text-left,
+.text-right {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
 }
 
-.textleft {
+.text-left {
   flex-direction: row;
 }
 
-.textright {
+.text-right {
   flex-direction: row-reverse;
 }
 
-p {
-    padding: 10px;
+
+.text-left div,
+.text-right div {
+  padding-left: 20px; 
 }
 
-/* Text container */
 
-.textleft div,
-.textright div {
-  flex: 1;
+/* Headings & paragraphs within articles */
+
+article h1,
+article h4 {
+  margin-bottom: 10px;
 }
 
-/* Image Styling */
+article p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+article button {
+  margin-top: 10px;
+}
+
+article .bluetext {
+  font-size: 1.5em;
+}
+
+/* Images in articles */
 
 .articles-image {
   max-width: 50%;
   height: auto;
+  object-fit: contain;
 }
 
-/* Article Center Aligned */
+/* Special background for the 'Benefício' article */
 
-.textcenter {
+.benefit-bg {
+  background-color: #f5f5f5;
+}
+
+/* Align text center articles */
+
+.text-center {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: stretch;
   text-align: center;
   background-color: rgb(198, 233, 230);
+  min-height: 300px;
 }
 
-.EDP-Zero {
+.edp-zero {
   flex: 1;
-  max-width: 60%;
+  max-width: 45%;
+  margin: auto;
+  line-height: 1.3;
 }
 
-/* Side Images */
+/* Center article headings */
+.edp-zero h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* #GeraçãoZero styling */
+.geracaozero {
+  font-size: 1.8em;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+/* Side images (leaves) */
 
 .sideimages {
-  max-width: 15%;
+  object-fit: contain;
+  max-width: 20%;
   height: auto;
 }
 
-/* Store Buttons */
+.sideimages-right {
+  object-fit: contain;
+  max-width: 20%;
+  height: auto;
+  align-self: flex-end;
+}
+
+/* Store Buttons Styles */
 
 .store-buttons {
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  margin-bottom: 50px;
 }
+
 .store-buttons img {
   max-width: 120px;
   height: auto;
 }
 
-/* Footer */
+/* Footer Styles */
 
-footer {
-  background-color: rgb(37, 37, 37);
-  color: white;
+.footer-image-div {
+  background-color: rgb(51, 51, 51);
   text-align: center;
   padding: 20px;
 }
 
-.footer-image-div {
-  background-color: rgb(51, 51, 51);
+.footer-image {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 10px auto;
 }
 
-.footer-image {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 0;
+footer {
+  background-color: rgb(37, 37, 37);
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
 }
 
 .footer-content {
   max-width: 640px;
   margin: 0 auto;
-  padding-top: 20px;
+  font-size: 0.85em;
+  line-height: 1.4;
+}
+
+.footer-content p {
+  margin-bottom: 10px;
 }
 
 .footer-content p:nth-of-type(3) {
@@ -157,5 +255,6 @@ footer {
 }
 
 footer a {
-  color: white;
+  color: #fff;
+  text-decoration: underline;
 }
